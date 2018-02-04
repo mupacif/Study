@@ -1,0 +1,124 @@
+#DATABASE
+
+CREATE DATABASE DB_TEST
+GO
+
+USE DB_TEST
+GO
+
+
+#temporary table
+
+SELECT CURRENT_TIMESTAMP as DateTime into #temps
+SELECT * FROM #temps
+
+
+#VARIABLE
+
+DECLARE @SQL type=value
+
+SET @SQL = '----'
+
+SELECT @SQL = col1 from tableName
+
+	DECLARE @var_tab table(id INTEGER, col1 VARCHAR(50))
+
+#GENERAL
+
+PRINT 'text'
+
+CONVERT(type1, @var)
+
+
+#CONCAT 
+
+'+'
+
+#IF/ELSE
+
+IF CND
+   BEGIN
+   END
+ELSE
+   BEGIN
+   END
+
+#CASE
+
+SELECT
+   CASE @var
+       WHEN static_val THEN 'case 1'
+       ELSE 'else value'
+   END
+FROM Table 
+WHERE CND
+
+
+
+SELECT 
+   CASE 
+       WHEN CND THEN ''
+       ELSE 'else'
+   END
+FROM table
+WHERE CND 
+
+
+#Boucles
+
+DECLARE @i INT = 0
+WHILE (@i < 0)
+    BEGIN
+    	PRINT ''
+	BREAK CND;/CONTINUE;
+    END
+
+#CURSOR 
+
+DECLARE name CURSOR
+
+OPEN  name
+FETCH name INTO @var1, @var2, @var3
+
+WHILE(@@FETCH_STATUS = 0)
+BEGIN
+    INSERT INTRO #tmp VALUES (@var1,@var2,@var3)
+    FETCH name INTO @var1, @var2,@var3
+END
+
+CLOSE name
+DEALLOCATE name
+
+SELECT * from #tmp
+
+
+#PIVOT
+
+SELECT Poid, stantard
+FROM
+(SELECT Poid, stantard from Table) as src pivot(agregat1, agregat2) as pvt
+
+
+#UDF
+-function
+CREATE FUNCTION fct()
+    @var type = value
+RETURN type
+AS
+BEGIN
+    code
+    RETURN value
+END
+
+SELECT * FROM fct()
+
+-procedure
+CREATE PROCEDURE name
+@var type config
+AS
+    SET NOCOUNT ON; 
+GO
+
+
+#TRANSACTION
+
