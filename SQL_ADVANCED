@@ -129,3 +129,9 @@ save transaction point --checkpoint
 rollback transaction checkpont -- go back to save checkpoint
 
 set transaction isolation level {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SNAPSHOT | SERIALIZABLE}
+
+
+
+#Lock
+
+insert into name_table with (NOLOCK| TABLELOCK | HOLDLOCK)
