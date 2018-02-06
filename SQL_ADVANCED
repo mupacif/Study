@@ -158,3 +158,18 @@ AS
 BEGIN
 	INSTRUCTION
 END
+
+
+//
+IF [NOT] UPDATE(col)
+BEGIN
+	code
+END
+
+
+#ERROR
+
+@@ERROR return 0 if no error
+
+RAISERROR num 'test'
+(ROLLBACK TRANSACTION)
