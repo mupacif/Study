@@ -135,3 +135,10 @@ set transaction isolation level {READ UNCOMMITTED | READ COMMITTED | REPEATABLE 
 #Lock
 
 insert into name_table with (NOLOCK| TABLELOCK | HOLDLOCK)
+
+
+
+#index
+
+CREATE INDEX name_IDX
+ON TABLE(col)
