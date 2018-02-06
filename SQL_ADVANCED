@@ -142,3 +142,19 @@ insert into name_table with (NOLOCK| TABLELOCK | HOLDLOCK)
 
 CREATE INDEX name_IDX
 ON TABLE(col)
+
+
+#triggers
+
+-DML : insert update delete(Create inserted / updated deleted table with data)
+-DDL : CREATE, ALTER, DROP, GRANT, DENY, REVOKE, UPDATE, STATISTICS
+
+for/after/instead of 
+
+CREATE TRIGGER name
+ON ALL SERVER| TABLE
+FOR | AFTER {INSERT|DELETE|UPDATE}
+AS
+BEGIN
+	INSTRUCTION
+END
