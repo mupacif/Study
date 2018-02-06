@@ -1,0 +1,48 @@
+#DATA STRUCTURES 
+
+VREATE SYNONYM nom
+FROM [PC400\ZEUS].adress.Shema.table
+
+#SCHEMA
+create schema Name AUTHORIZATION dbo
+ALTER  schema name
+	transfer dbo.job
+#DATABASE FILEGROUP
+	-Partially contained 
+#INDEXES
+	-Clustered
+	-Non clustered
+	-index with added cols
+	-Filtred Index : CREATE INDEX _name ON Table(col) WHERE IN NOT NULL
+	-Columnstore (sql server 2012) : compressered (datawharehouse) create nonclustered columnstore index _name_
+
+	recap:
+	-identify column to user
+	-select index type(clusterd/non clustered(added column)
+	-add index options(unique, not unique, column storage)
+	-choose filegroup secondary/primary
+
+	best practice
+	- select importante column
+	- row intervals
+	- smallest possible
+	- dont use it on smal tables (?)
+	- request wrapper 
+	- unique indexes
+exemple:
+
+create table Person(
+id int IDENTITY(1,1) NOT NULL Default(1,1),
+Name nvarchar(50),
+Description nvarchar(50),
+isActive BIT
+)
+LTER TABLE Person
+	ADD CONSTRAINT Pk_Person PRIMARY KEY NONCLUSTER(id)
+
+
+	-vue indexé : create view scraps with schemabinding
+	as
+		select ...
+	CREATE UNIQUE CLUSTERED INDEX _name 
+	on scrp ( )
