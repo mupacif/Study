@@ -1,0 +1,66 @@
+#FUNCTION
+
+fun sum(a:Int,b: Int):Int
+{
+
+}
+
+fun sum(a:Int, b:Int)= a + b
+
+fun print(a:Int,b:Int)[: Unit]{
+	println("data $a et $b is ${a+b}")
+
+}
+
+#variables
+
+var x = value;
+val CONST = val;
+
+
+fun maxOf(a:Int,b:Int) = if(a>b) a else b
+
+#Nullable value
+
+fun parseInt(str:String):Int?
+{
+
+}
+
+parseInt(str) - can be null
+
+##Automatic cast
+type : Any
+type is String 
+
+#loop
+
+val items = listOf("1","2","3")
+for(index in items.indices)
+{
+}
+for(item in itemps)
+
+while()
+{}
+
+fun describe(obj:Any):String = when(obj){1->"One" is Long->"yosh" !is String ->"Not a string" else->"Unknown"}
+
+
+#Range
+
+if(x !in 1..size)
+
+for(x in 1..5 step 2)
+
+#Collection 
+when("orange" is items->println("")
+
+fruits.filter{it.startsWith("a")}.sortedBy{it}.map{it.toUpperCase()}.forEach{ print(ln)}
+
+#Class
+
+class MyClass{
+var name: String= ...
+
+}
