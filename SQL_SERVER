@@ -13,9 +13,10 @@ ALTER  schema name
 	-Clustered
 	-Non clustered
 	-index with added cols
-	-Filtred Index : CREATE INDEX _name ON Table(col) WHERE IN NOT NULL
-	-Columnstore (sql server 2012) : compressered (datawharehouse) create nonclustered columnstore index _name_
-
+	-Filtred Index : CREATE (NONCLUSTERED) INDEX _name ON Table(col) WHERE IN NOT NULL(client belge)
+	-Columnstore (sql server 2012) : regroupé en colonne - compressered (no read/write) (datawharehouse) create nonclustered columnstore index _name_
+	-index de recouvrement(si les elements sont ordonné dans un select) - taille index
+	
 	recap:
 	-identify column to user
 	-select index type(clusterd/non clustered(added column)
@@ -46,3 +47,19 @@ LTER TABLE Person
 		select ...
 	CREATE UNIQUE CLUSTERED INDEX _name 
 	on scrp ( )
+-Options: parallélisme 
+
+#GENERAL
+
+tempdb : donnée //
+DROP_EXISTING : 
+ONLINE : si la db est en utilisation
+
+
+
+
+#Security
+
+1- login:password(create dbn backup)
+----------------------------
+2-user : no password(create table, alter
