@@ -62,5 +62,44 @@ fruits.filter{it.startsWith("a")}.sortedBy{it}.map{it.toUpperCase()}.forEach{ pr
 
 class MyClass{
 var name: String= ...
+}
+//primary / secondary constructor
+class Person[ constructor]([val ]firstname:String)
+{
+val firstp = "$name".also(::println)
+init{ println("${name} is set")}
 
+}
+
+class Person{
+
+constructor(parent: Person)
+{
+	Parent.children.add(this);
+}
+}
+
+public Person(val name:String="default"){
+	constructor(name:String, parent:Parson):this(name)
+	{
+		parent.children.add(this)
+	}
+}
+
+
+#Heritance
+
+open class Base(p:Int){
+open fun v(){}
+}
+
+class Derived(p: Int) : Base(p)
+{
+	[final] override fun v(){}
+}
+
+#interface
+
+interface Foo{
+val count:Int
 }
