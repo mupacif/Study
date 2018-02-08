@@ -76,4 +76,16 @@ management -> Maintenance plan -
 :check integrety task 
 :planning
 :job schedule
-:shink condition 
+:shink condition
+:index updating
+:statistics :  sample by %
+:bachup history cleanup
+:extension(to know who backedup) - do not compress
+:backup cleanup
+
+#Operator 
+
+Integration services catalogs 
+-SQL Server Agent - Operator
+ ex: log files used Size
+

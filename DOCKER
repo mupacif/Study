@@ -1,0 +1,18 @@
+#Start
+
+docker start container
+docker run container
+
+
+#connect to docker container 
+
+docker exec -t -i runnin_container "bash"
+docker 
+#images
+
+docker run images -p local:container (-P for dynamically)
+docker rmi image
+
+#container
+
+docker rm $(docker ps -a -q)
