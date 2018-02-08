@@ -56,7 +56,8 @@ DROP_EXISTING :
 ONLINE : si la db est en utilisation
 
 
-
+MODEL : used by sql server
+MSDB : sql agent, jobs, operators 
 
 #Security
 
@@ -65,4 +66,14 @@ ONLINE : si la db est en utilisation
 2-user : no password(create table, alter
 
 
+#Plannification 
 
+
+management -> Maintenance plan - 
+: sperate schedule for each tast | single schedule fot the entire plan or not ..
+: maintenance tasks : 
+:ordering
+:check integrety task 
+:planning
+:job schedule
+:shink condition 
