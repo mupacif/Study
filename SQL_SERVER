@@ -87,7 +87,12 @@ management -> Maintenance plan -
 
 Integration services catalogs 
 -SQL Server Agent - Operator
- ex: log files used Size
+ex: log files used Size
 
 
 #Management - Maintenance Plans - ETL
+#replication 
+- snapshot publication * 
+- transaction publication *
+- peer to peer 
+- merge 
