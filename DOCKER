@@ -16,3 +16,14 @@ docker rmi image
 #container
 
 docker rm $(docker ps -a -q)
+
+#DockFile
+
+#comment
+FROM base_images:tag
+MAINTAINER firstname lastname
+RUN <cmd> | ["executable","param1","param2"] #run mkdir name | "bin/bash","-C","mkdir name"];\
+run yu update -y && yum install -y gamma
+mkdir name
+COPY local_file CONTAINER_folder
+CMD
