@@ -50,5 +50,9 @@ docker run container cmd
 #ENTRYPOINT
 
 ENTRYPOINT <CMD> (TERMINAL)
-ENTRYPOINT ["exec","param1","param2"] (execution) will ignore CMD params
+ENTRYPOINT ["exec","param1","param2"] (execution) will ignore CMD parame)
 
+
+#EXEC
+
+docker exec running_container cmd terminal
