@@ -13,6 +13,9 @@ docker
 docker run images -p local:container (-P for dynamically)
 docker rmi image
 
+docker build -t name
+
+docker run --rm --name _name images (rm means it will be deleted at the end)
 #container
 
 docker rm $(docker ps -a -q)
@@ -42,3 +45,10 @@ docker run --entrypoint ls container_name
 
 -override cmd
 docker run container cmd
+
+
+#ENTRYPOINT
+
+ENTRYPOINT <CMD> (TERMINAL)
+ENTRYPOINT ["exec","param1","param2"] (execution) will ignore CMD params
+
