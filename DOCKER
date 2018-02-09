@@ -26,4 +26,19 @@ RUN <cmd> | ["executable","param1","param2"] #run mkdir name | "bin/bash","-C","
 run yu update -y && yum install -y gamma
 mkdir name
 COPY local_file CONTAINER_folder
-CMD
+CMD <cmd>|["exec","param1","param3"]
+
+#CMD
+
+execution time 
+
+ENTRYPOINT ["/bin/ping","-C","5"]
+CMD ["localhost"]
+
+
+-override entrypoint
+
+docker run --entrypoint ls container_name
+
+-override cmd
+docker run container cmd
