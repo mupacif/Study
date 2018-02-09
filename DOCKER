@@ -56,3 +56,9 @@ ENTRYPOINT ["exec","param1","param2"] (execution) will ignore CMD parame)
 #EXEC
 
 docker exec running_container cmd terminal
+
+#EXPOSE
+
+EXPOSE [port:]port
+
+docker run -P (automatic) 
