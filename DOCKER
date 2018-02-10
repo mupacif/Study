@@ -66,17 +66,24 @@ docker run -P (automatic)
 
 
 #ENV
-
-
+->run
+->overwrite ARG
 
 #LABEL
-
+metadata
 
 #ARGS
-
+->build
 
 usage of args + env
 
 FROM Centos:7
 ARG Version
 ENV Version ${Version:-1.0}
+RUN echo $version > /tmp/version
+CMD cat /tmp/version
+
+
+#ONBUILD
+
+execute only when inherited
