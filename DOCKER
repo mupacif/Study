@@ -87,3 +87,20 @@ CMD cat /tmp/version
 #ONBUILD
 
 execute only when inherited
+
+
+#STOPSIGNAL <signal>
+
+1- end session process sighup
+2- stop the process sigint
+3- quit process  sigquit
+6- cancel process sigabrit
+9- stop process directly (sigkill - process manager)
+10- signal user1 (siguser1)
+12- signal user2 (siguser2)
+15_ terminate process (sigterm - process can manage it)
+
+
+
+
+
