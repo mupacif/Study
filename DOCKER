@@ -62,3 +62,21 @@ docker exec running_container cmd terminal
 EXPOSE [port:]port
 
 docker run -P (automatic) 
+
+
+
+#ENV
+
+
+
+#LABEL
+
+
+#ARGS
+
+
+usage of args + env
+
+FROM Centos:7
+ARG Version
+ENV Version ${Version:-1.0}
