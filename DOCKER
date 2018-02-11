@@ -108,3 +108,5 @@ execute only when inherited
 #docker-compose
 
 #docker swarm
+
+#docker-machine
