@@ -1,0 +1,151 @@
+var maVariable = 23; // camelcase 
+var trois_fois_9 = 27; // pas commencer avec un chiffre
+var troisFois9 = 27; //camalcase
+var leTotal = 100; //pas d'espace
+var email= "jean.dupon@gmail.com"; //pas commencer avec @
+var variable = (30+20+10); //???
+var phrase ="Bonjour tout le monde !"; //les "" 
+var age = 26; //""
+var resultat = 3 + 3 + 3; // pas de "" autour du 3 
+
+var entier = parseInt("15");  //parse(val,base)
+
+
+typeof "John" //string
+typeof 3.14 //number
+typeof NaN //number 
+typeof false //boolean
+typeof [1,2,3,4] //object
+typeof {name:'John', age:34} //object
+typeof new Date() //object
+typeof function () {} //function
+typeof null //object
+
+//array
+
+valueOf() //valeur primitive?
+toString() // afficher element du tableau
+join(*) //same as toString en spécifiant le séparateur
+pop() //retire le dernier
+push() //ajoute un valeur 
+shift() //retire le première element du tableau
+unshift() //ajouter un element au debut du tableau
+
+sort() //trie alphabétique
+//splice(a,b,el1,el1) //ajoute el1 et e2 à partir de a (sdemete b)
+
+reverse() //ok
+sort((a,b)=>a-b) //(b-a)
+concat(tab)
+slice(a,b) //découpe entre l'element a et b
+
+/////////
+
+
+var tab = new Array();
+tab.push(1)
+tab.push(2)
+tab.push(3)
+tab.push(6)
+console.log(tab.toString());
+console.log(tab.join(";"));
+console.log(tab.pop());
+tab.unshift(5);
+console.log(tab.shift())
+
+tab.sort((a,b)=>b-a)
+console.log(tab.toString()) 
+
+var tab2 = [11,56,145];
+tab = tab.reverse().concat(tab2)
+console.log(tab.toString())
+
+
+console.log(tab.slice(1,11))
+
+
+/*
+*
+*1
+*
+*/
+
+
+var tab = ["a","b","c","d"]
+var tab = new Array()
+tab.push("a");
+tab.push("b");
+tab.push("c");
+tab.push("d");
+
+/**
+*2
+*/
+
+var resultats = {
+	pierre:10,paul:6, jacques : 3, alain : 8}
+var somme = 0;
+
+
+somme += resultats.pierre + resultats.paul+resultats.jacques +resultats.alain;
+
+
+console.log("somme : "+somme);
+console.log("moyenne : "+somme/4);
+
+/**
+*  3
+*/
+
+var inverse = tab.push("e")
+inverse = tab.inverse()
+
+/**
+4
+*/
+tab.push("e");
+/**
+*5
+*/
+var resultats = {
+pierre:10,paul:6, jacques : 3, alain : 8}
+var tmp = Object.entries(resultats).sort((a,b)=>a[1]-b[1]);
+var median = tmp.indexOf(tmp.find((a)=>a[1]>=5))
+var echec = tmp.slice(median)
+
+/*
+charAt() //index
+charCodeAt()
+concat()
+fromCharCode() //unicode
+indexOf() // recherche 1er occurence
+lastIndexOf() //dernière occurence
+match("regex")
+replace
+serach
+splice
+split
+substr
+substring
+toStringtoUpperCase
+valueOf
+*/
+
+var chaine = "ma formation javascript" ;
+
+//ma
+chaine.indexOf("ma")
+
+//p 
+chaine.indexOf("p")
+
+//lettre situé a 21
+chaine.charAt(21)
+
+chaine.replace("javascript","java")
+
+chaine.replace(/ /g,",")
+
+chaine.split('').reverse()
+
+
