@@ -216,3 +216,241 @@ function f(separator)
 }
 
 f(',','hihi','hoho')
+
+//default values f(a, b='i')
+
+// rest parameters vs arguments
+
+//->restArgs are array 
+//->arguments = all args // + callee
+//-> rest : only those passed to the function 
+
+
+//Destructuring 
+
+function(...[a,b,c])
+{
+return a + b + c;	
+}
+
+
+
+/***
+**
+* Promises
+*/
+pending : initial state, not fulfilled or rejected
+fulfilled : successful operation (fulfill)
+rejected : failed operation (reject) 
+settled : the Promise is ether fulfilled or rejected, but not pending
+
+
+Promise : fulfill - reject : then(onFullFIllment) / then(onRejection)|catch(onRejection)
+:return  Promise : then() - catch():
+
+
+const myPromise = new Promise((resolve,reject)=>
+{
+	resolve(value)
+	reject("reason")
+})
+//DOM
+
+document.createElement(nodeName)
+document.body.appendNode(document.createElement(nodeName))
+
+
+attributes
+childNodes
+firstChild
+
+//timer
+
+a = setTimeout(f,delai)
+clearTimeout(a)
+
+i = setInterval(d, compte a rebours)
+clearInterval(i)
+
+//Arrays
+forEach
+//map : returns a enw array of  the return value
+
+//filter 
+
+//some : true if one of them is true
+
+//every if all are true
+
+//reduce : to a single item
+
+//reduceRight(f, initialValue))
+
+
+//Array.prototype.forEach.call(array, applyThis)
+
+//typedArrays
+
+(U)int8Array  Int16Array int32Array Float32Array
+
+
+//MAP
+m = new Map();
+m.set('clé','value');
+m.size;
+m.delete('clé')
+M.clear()
+
+//WeakMap same as Map but not numerable
+
+//Sets 
+var s = new Set();
+s.add("")
+s.delete(val)	
+s.size
+for(let i of s) 
+	
+car ws = new WeakSet
+
+/***
+*
+*
+* Object
+*/
+
+var o = new Object()
+o.attr=value
+o["attr"]=value 
+
+
+
+
+//CSS
+getComputedStyle(elt);
+document.querySelector(".example")
+
+//EVENTS
+
+changes
+click
+dbclick
+error
+focus
+blur
+keydown
+keyoup
+keypress
+load
+mousedown
+mouseup
+mousemove
+mouseover
+resize
+select
+
+
+//Nodes
+
+document.body.appendChild(document.createElemnt("li"))
+
+childNodes
+firstChild
+attributes
+lastChild
+parentChild
+parentNode
+nodeName
+
+previousSibling : noeud précedent au meme niveau
+nextSibling : prochain
+textContent : le texte
+
+nodeType = 1 noeud element 2 attibuts 3 text
+
+
+nodeValue retourne la valeur du noeud
+
+
+/***
+* Object
+*/
+
+function Car(make,model)
+{
+	 this.make = make;
+	 this.model = model;
+	 
+}
+
+var v = new Car('haha','hehe')
+
+
+var Animal = {type:'yo', name : '',getType:function(){return this.type}}
+
+var fish = Object.create(Animal)
+fish.type = "heheh";
+fish.getType()
+
+/***
+* prototype
+*/
+
+Car.prototype.color = null;
+v.color = "red";
+
+//methods
+
+var obj = {
+	method(param){
+		
+	}
+}
+
+//getter and setters
+
+var o = {
+	a: 7,
+	get b()
+	{
+		return this.age;
+	},
+	set c(x)
+	{
+		this.a = x;
+	}
+	
+}
+
+o.b 
+o.c(val)
+
+//
+var d =Date.prototype;
+Object.defineProperty(d,'year',
+{
+	get:function(){ return this.getFullYear();},
+	set: function(y) {this.setFullYear(y);}
+});
+
+
+var now = new Date();
+console.log(now.year); // 2000
+now.year = 2001; // 987617605170
+console.log(now);
+// Wed Apr 18 11:13:25 GMT-0700 (Pacific Daylight Time) 2001
+
+
+var o = { a: 0}
+
+Object.defineProperty(o,{
+    'b': { get: function() { return this.a + 1; } },
+    'c': { set: function(x) { this.a = x / 2; } }
+});
+
+o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
+
+
+
+//Deleting properties 
+delete obj.attr;
+delete g; //globale value

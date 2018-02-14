@@ -6,3 +6,5 @@ services:
        - .:/usr/share/nginx/html
      ports:
        - "8080:80"
+     environment:
+       - LANG=fr_FR.UTF-8
