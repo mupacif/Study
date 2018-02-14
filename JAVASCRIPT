@@ -149,3 +149,70 @@ chaine.replace(/ /g,",")
 chaine.split('').reverse()
 
 
+##
+
+javascript:void(0) ne fait rien 
+
+
+## Dates 
+
+var today = new Date(); //today
+alert(today);
+
+
+var d1= new Date(timestamp);
+
+var d3 = new Date(year,month-1,day, hour,minit,second, millisecond)
+
+getFullYear()
+getMonth()
+getDate()
+getDay()
+getHours()
+...
+getTime()
+
+
+### Loops
+
+do{
+	
+}while
+
+for(var in str)
+{
+	
+}
+for(var of var)
+{
+	
+}
+while()
+{
+	
+}
+
+##functions 
+
+var createPet = function(txt)
+{
+ var attr;
+ return{ setName:function(newName){name = newName}},
+ getName:function(){return name;}
+	
+}
+
+var pet = createPet("name");
+
+//Arguments  (daaaamn)
+
+function f(separator)
+{
+	var results = '';
+	for(var i=1;i <arguments.length;i++)
+		results += `${arguments[i]}${separator}`
+	
+	return results;
+}
+
+f(',','hihi','hoho')
