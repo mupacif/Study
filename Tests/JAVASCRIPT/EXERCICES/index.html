@@ -3,7 +3,14 @@
 <head>
 	<title>Heures</title>
 	<meta charset="utf-8">
+	<style>
+		table,th,td
+		{
+			border: 1px solid black;
+			border-collapse: collapse;
 
+		}
+	</style>
 </head>
 <body>
 
@@ -22,7 +29,7 @@
 
 <button id="button">gogo</button>
 <script type="text/javascript" src="append_item.js"></script> -->
-
+<!---6 15/02 <h1>Descriptif produit</h1>
 <table>
 	<thead>
 	<tr>
@@ -31,9 +38,30 @@
 	</tr>
 	</thead>
 	<tbody>
-	<tr>Chaise<td></td></tr>
+	<tr><td>Chaise</td><td>25</td><td><button onclick="add(0)">ajouter</button></td><td><button onclick="remove(0)">retirer</button></td></tr>
+	<tr><td>Table</td><td>150</td><td><button onclick="add(1)">ajouter</button></td><td><button onclick="remove(1)">retirer</button></td></tr>
+	<tr><td>Meuble</td><td>250</td><td><button onclick="add(2)">ajouter</button></td><td><button onclick="remove(2)">retirer</button></td></tr>
 
 	</tbody>
+
 </table>
+
+<h1>Mon panier</h1>
+<table id="panier">
+	<thead>
+	<tr>
+		<th>type</th>
+		<th>prix</th>
+		<th>quantité</th>
+	</tr>
+	</thead>
+	<tbody>
+	</tbody>
+
+</table>
+<h3>Mon total</h3> : <input id="total" type="text" value="" disabled>
+<script type="text/javascript" src="store_price_compute.js">
+
+</script> ---->
 </body>
 </html>
