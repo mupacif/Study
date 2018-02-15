@@ -21,7 +21,9 @@ typeof new Date() //object
 typeof function () {} //function
 typeof null //object
 
-//array
+/***
+** Array
+**/
 
 valueOf() //valeur primitive?
 toString() // afficher element du tableau
@@ -41,6 +43,11 @@ slice(a,b) //découpe entre l'element a et b
 
 /////////
 
+var arr = new Array(el, .. ,el2)
+var arr = Array(el, .. ,el2)
+var arr = [el, .. ,el2]
+
+arr.length = 2 //delete things before 
 
 var tab = new Array();
 tab.push(1)
@@ -454,3 +461,230 @@ o.c = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
 //Deleting properties 
 delete obj.attr;
 delete g; //globale value
+
+function Manager()
+{
+	Employee.call(this); //hérité d'employé
+	this.reports= [];
+}
+
+Manager.prototype = 
+    Object.create(Employee.prototype);
+	
+//ITERATORS : object that has next method and return {value,done}
+	
+	
+function makeIterator(array) {
+    var nextIndex = 0;
+    
+    return {
+       next: function() {
+           return nextIndex < array.length ?
+               {value: array[nextIndex++], done: false} :
+               {done: true};
+       }
+    };
+}
+
+var it = makeIterator(['yo', 'ya']);
+console.log(it.next().value); // 'yo'
+console.log(it.next().value); // 'ya'
+console.log(it.next().done);  // true
+
+
+
+//GENERATORS
+
+function* idMaker()
+{
+	var idx = 0;
+	while(true)
+		yield idx++;
+}
+
+var gen = idMaker();
+
+gen.next().value
+
+//------------
+
+for (let value of ['a', 'b', 'c']) {
+    console.log(value);
+}
+
+[...'abc'];  //iterate one by one
+
+[a,b,c] = new Set([1,2,3])
+
+
+//if overwite of Symbol.iterator make you a iterable
+var myIterable = {};
+myIterable[Symbol.iterator] = function* () {
+    yield 1;
+    yield 2;
+    yield 3;
+};
+
+for (let value of myIterable) { 
+    console.log(value); 
+}
+// 1
+// 2
+// 3
+
+or
+
+[...myIterable]; // [1, 2, 3]
+
+next(val) ; //val will be considerered as the last value of the iterator
+//
+
+function* gen()
+{
+	var start = 0;
+	while(true)
+	{
+		var reset = yield start++; //next(val) -> yield start ++ = val
+		if(reset)
+			start = 0
+	}
+}
+
+/**
+*ASYNC //AWAIT 
+*/
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x);
+    }, 2000);
+  });
+}
+
+async function add1(x) {
+  const a = await resolveAfter2Seconds(20);
+  const b = await resolveAfter2Seconds(30);
+  return x + a + b;
+}
+
+add1(10).then(v => {
+  console.log(v);  // prints 60 after 4 seconds.
+});
+
+
+function f(...[a,b,c])
+{
+	return a+b+c;
+}
+
+/***
+* Classes
+*/
+class name extends SuperClass
+{
+	constructor()
+	{}
+	
+	get area()
+	{}
+	
+	set area(value)
+	{
+		
+	}
+	
+}
+class StaticMethodCall {
+  constructor() {
+    console.log(StaticMethodCall.staticMethod()); 
+    // 'static method has been called.' 
+
+    console.log(this.constructor.staticMethod()); 
+    // 'static method has been called.' 
+  }
+
+  static staticMethod() {
+    return 'static method has been called.';
+  }
+}
+
+/***
+* REGEX 
+*/
+
+var regex = /[a-z]/gi;
+str = "ma chaine de caractère";
+str.match(regex)
+
+g global match
+i ignore casem multiline 
+u unicode 
+
+/reg/option
+
+new Regex('reg', 'opt')
+new Regex(/reg/, 'opt')
+
+
+var re = /\w+/
+new Regex('\\w+')
+
+
+
+. matches all
+\d digit
+\DOM
+\w
+\W
+
+\s white space
+\S not a white space
+
+\t horizontal tab \r \n \v tap \f from feed
+[\b] backslash
+\0 null
+
+
+[^xyn] negate 
+x|y
+
+^ beginning
+$ end
+\b
+
+//Grouping
+
+(X) [1][n] $1-$9
+(?:x) do not remember 
+
+x*? smallest match
+x+? x??
+
+c(?=y) x if x is follow by y
+c(?!y) x if x is not followed by y
+
+//capturing group
+
+var mystr = "texte 12 sd 15 sdf 23";
+
+var re = /(\d)/g
+
+mystr.match(re)
+
+////
+match = re.exec(mystr)
+while(match)
+{
+	console.log(match[0])
+	match = re.exec(mystr)
+	
+}
+
+//
+reg.test(reg) // true if it's correct
+reg.exec //renvoi resultat 
+
+str.match // retourne les resultats corerspondant
+str.replace
+str.search renvoi la position
+str.split decoupe 

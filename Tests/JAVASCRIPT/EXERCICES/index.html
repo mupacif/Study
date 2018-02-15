@@ -63,5 +63,72 @@
 <script type="text/javascript" src="store_price_compute.js">
 
 </script> ---->
+
+
+
+<form method="GET" onsubmit="event.preventDefault();" action="#">
+	<input type="text"  name="nom" id="nom">
+	<input type="text" name="prenom" id="prenom">
+	<input type="number" placeholder="code postal" name="postal" id="postal">
+	<button onclick="autocomplet()">autocompléntion</button>
+	<input type="reset" value="reset">
+	<input type="submit" value="envoyer" onclick="send()">
+</form>
+
+
+<script>
+function $(elt)
+{
+	return document.getElementById(elt)
+}
+
+
+var nomInput = $("nom");
+var prenomInput = $("prenom");
+var form = document.forms[0];
+
+
+function autocomplet() {
+
+	form.nom.value = "Dupont"
+	form.prenom.value = "jean"
+}
+
+function send() {
+    console.log("submit")
+	var posteCode = form.postal.value;
+	var nom = form.nom.value;
+	var prenom = form.prenom.value;
+
+	if(nom != "" && prenom != "" && posteCode.length > 3)
+	    alert("données envoyé")
+	else
+	    alert("erreur")
+
+	//form.submit();
+}
+
+</script>
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

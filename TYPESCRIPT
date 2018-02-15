@@ -1,0 +1,89 @@
+/**
+* Variable
+*/
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: number = 0o744;
+
+//Array
+
+let list: number[] = [1, 2, 3];
+
+let list: Array<number> = [1, 2, 3];
+// Tuples 
+
+let x: [string, number];
+x = ["hello", 10];
+
+
+//Enum
+
+
+enum Color {Red, Green, Blue}
+let c: Color = Color.Green
+
+
+enum Color {Red = 1, Green = 2, Blue = 4}
+let c: Color = Color.Green;
+
+// Null undefined 
+let u: undefined = undefined;
+let n: null = null;
+
+// Never  (pour les erreurs)
+
+// Function returning never must have unreachable end point
+function error(message: string): never {
+    throw new Error(message);
+}
+
+// Inferred return type is never
+function fail() {
+    return error("Something failed");
+}
+
+// Function returning never must have unreachable end point
+function infiniteLoop(): never {
+    while (true) {
+    }
+}
+
+//Any
+
+let notSure: any = 4;
+notSure = "maybe a string instead";
+notSure = false; // okay, definitely a boolean
+
+// Void
+
+function warnUser(): void {
+    alert("This is my warning message");
+}
+
+
+interface Person {
+    firstName: string;
+    lastName: string;
+}
+
+function greeter(person: Person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+class Student {
+    fullName: string;
+    constructor(public firstName: string, public middleInitial: string, public lastName: string) {
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+}
+
+//Type assertion
+
+let someValue: any = "this is a string";
+
+let strLength: number = (someValue as string).length;
+
+let someValue: any = "this is a string";
+
+let strLength: number = (<string>someValue).length;

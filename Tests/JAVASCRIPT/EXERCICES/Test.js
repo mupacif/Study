@@ -60,3 +60,4 @@ let mPromise = new Promise((resolve,reject)=>
     );
 
 mPromise.then((val)=>console.log("Yeah"+val)).catch((reason)=>{})
+
