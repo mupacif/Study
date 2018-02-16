@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Jquery</title>
+    <meta charset="utf-8">
+
+<style>
+    td{
+        border: 1px solid #000;
+        width: 50px;
+        height: 20px;
+        padding: 0;
+    }
+
+    table{
+        border-collapse: collapse;
+    }
+
+    td input{
+        width: 48px;
+        height: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .gris{
+        background-color: #00FF00;
+    }
+
+    .grisClair{
+        background-color: #00FFFF;
+    }
+</style>
+</head>
+<body>
+
+<button id='btnRow'>New Row</button>
+<button id='btnCol'>New Col</button>
+<table id='tab1'>
+    <tbody>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+    //click
+    $('btnRow').on( "click",function(){
+
+        console.log("hello");
+    })
+
+
+
+    $.ajax({
+
+        "url":"index.php",
+        "type":"GET",
+        "dataType":"text",
+        "success":function(data,textStatus,xhr){
+            console.log(data);
+                     }}
+    );
+</script>
+</body>
+</html>
+

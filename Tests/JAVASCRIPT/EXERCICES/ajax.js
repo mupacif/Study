@@ -28,7 +28,7 @@ function ajx(url) {
  * @param callback
  */
 function getJson(url,callback) {
-    ajx(url)
+     ajx(url)
     .then(value=>callback(eval(`(${value})`)))
     .catch((error)=>callback(null))
 
