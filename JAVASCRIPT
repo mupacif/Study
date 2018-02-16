@@ -688,3 +688,32 @@ str.match // retourne les resultats corerspondant
 str.replace
 str.search renvoi la position
 str.split decoupe 
+
+
+/**
+* AJAAX
+*/
+
+var ajx = new XMLHttpRequest().abort()
+ajx.open('get','data.txt',false);
+
+ajx.send(null);
+
+console.log(ajx.responseText)
+ajx.onreadystatechange = function() {
+ if (ajx.readyState == XMLHttpRequest.DONE) {
+            if (ajx.status == 200) {
+                alert(ajx.responseText);
+            } else {
+                alert('Un problème est survenu avec la requête.');
+            }
+        }
+
+};
+//
+
+
+<data>
+<texte>
+</texte>
+</data>

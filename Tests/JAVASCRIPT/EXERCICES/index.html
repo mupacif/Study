@@ -64,7 +64,7 @@
 
 </script> ---->
 
-
+<!---
 
 <form method="GET" onsubmit="event.preventDefault();" action="#">
 	<input type="text"  name="nom" id="nom">
@@ -108,9 +108,78 @@ function send() {
 	//form.submit();
 }
 
+</script>--->
+<h1>Tapez un code postal belge</h1>
+<input type="number" id="postal_code"><input type="button" value="Recherchez" onclick="search()">
+<div id="msg">
+	
+</div>
+<script type="text/javascript" src="ajax.js"></script>
+<script>
+	//Utils
+	function $(elt) {
+		return document.getElementById(elt)
+    }
+	//get text from input + tests
+
+	//le div qui montre le message
+	var msgDisplayDiv = $("msg");
+
+	var errorMessageText= "Le code postal entré n'existe pas";
+	function search() {
+	    var code=$("postal_code").value;
+	    // test du code
+		if(/^\d{4}$/.test(code))
+		{
+		   //get elements from server
+			var url = "http://api.zippopotam.us/be/"+code
+
+
+			//callback pour récupérer les valeur
+            getJson(url,function (val) {
+
+				//si quelque chose est retournée
+				if(val!=null)
+				{
+
+					console.log(val)
+                    let info =
+                        {
+                            pays:val.country,
+							ville:val.places[0]["place name"],
+							longitude:val.places[1].longitude,
+							latitude:val.places[1].latitude
+                        };
+
+                        var text =
+							`Pays : ${info.pays} \n\
+							Ville : ${info.ville} \n\
+							Longitude : ${info.longitude} \n\
+							latitude : ${info.latitude} \n\
+							`;
+
+
+                        //
+
+                    msgDisplayDiv.innerText=text;
+                    $("postal_code").value = "";
+				}else
+				{
+                    msgDisplayDiv.innerText= errorMessageText;
+				}
+            });
+
+
+
+		}else
+		{
+		    alert("Mauvais code postal")
+		}
+    }
+	//if found discplay of message
+	
+	
 </script>
-
-
 </body>
 </html>
 
