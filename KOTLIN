@@ -2,7 +2,6 @@
 
 fun sum(a:Int,b: Int):Int
 {
-
 }
 
 fun sum(a:Int, b:Int)= a + b
