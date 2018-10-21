@@ -1,0 +1,20 @@
+
+ niveau <- 0
+ stack <- []
+ var text <- ""
+line <- ""
+tmpLine
+tq hasNextLine() et line <- nextLine()
+si contient token_niveau1
+    stack.push(tokens[token][1])
+    niveau++::print
+sinon
+ si stack>0 et token <- stack.last
+     niveau -1::print
+     stack_pop
+ sinon
+tmpLine <- \t*niveau+left_trimed(line)   
+text+<-line         
+     
+         
+     

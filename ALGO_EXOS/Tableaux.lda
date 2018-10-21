@@ -1,0 +1,115 @@
+1) 1 4 9 16 25
+2) 0 1 1 1 2
+3) a 2 5 7 9 11, 4 7 9 11 13
+4)tab 1 1 *2 3 5 8 13 21 34
+/*
+moyennes des nbs pairs + moyenne des multiples de 3
+ d'un tableau initialisé par l'user
+ (max 15nb et -1 = stop) /
+*/
+tableau tab[15]:entier
+var nb,sommeNbPairs,cptNbPairs,sommeNbMult3,cptNbMult3, i:entier
+//coumpteur de boucle
+i<-0
+cptNbPairs<-0
+cptNbMult3<-0
+
+répéter
+	lire nb
+	tab[i]<-nb
+jusqu'à ce que i>15 ou nb=-1
+//moyenne nb pairs
+pour j de 1 à i faire
+	si tab[j]MOD2=0 alors
+		sommeNbPairs<-sommeNbPairs+tab[j];
+		cptNbPairs<-cptNbPairs+1
+	fsi
+	si tab[j]MOD3=0 alors
+		sommeNbMult3<-sommeNbMult3+tabl[j]
+		cptNbMult3<-cptNbMult3+1
+	fsi
+fpour
+si cptNbPairs > 0 alors
+	ecrire "moyenne des nombres pairs:, %d/%d", sommeNbPairs,cptNbPairs
+sinon
+	ecrire "pas de nb pair"
+fsi
+
+si cptNbMult3 > 0 alors
+	écrire "moyenne des nombres multiple de 3: %d/%d", sommeNbMult3,cptNbMult3
+sinon
+	écrire "pas de multiple de 3"
+fsi
+
+6)
+tableau tab[100]:réel
+var nb,moy:réel
+var i,cptSupAMoy:entier
+i<-0
+moy<-0.0
+//on lit les 100 notes
+répéter
+	lire nb;
+	tab[i]<-nb
+    //addition de tous les nb
+    moy<-moy+nb      
+	i<-i + 1
+jusqu'à-ce-que i==100
+//calcule de la moyenne
+moy<-moy/100
+i<-0
+cptSupAMoy<-0
+pour i de 1 à 100 faire
+	si tab[i]>moy alors
+		cptSupAMoy<-cptSupAMoy+1
+	fsi
+fpour
+ecrire "il y a %d nombres superieur à la moyenne",cptSupAMoy
+
+7)
+//rentré clavier
+//tab[20] -1 = stop
+//si l'indie correspond à sa valeur
+tableau vals[20]:entier
+var nb,i,j:entier
+i<-0
+répéter
+	lire nb
+	vals[i]<-nb
+	i<i+1
+jusqu'à-ce-que i=20 ou nb=-1
+
+nb<- 20
+pour j de 1 à i faire
+	si j=tab[j] alors
+		nb<-j
+		écrire "la répose est %d",j
+	fsi
+fpour
+si nb = 10 alors
+	écrire "aucune valeur du tableau égale à son indice" 
+fsi
+
+8)
+tableau tabInit[20],tabFinal[20]:caractère
+var c:caractère
+var i,j:entier
+i<-0
+répéter
+	lire c
+	tabInit[i]<-c
+	i<-i+1
+jusqu'à-ce-que i=20
+j<-0
+pour i de 1 à 20 faire
+	si tabInit[i]<>'A' alors
+		tabFinal[j]<-tabInit[i]
+		j<-j+1
+	fsi
+fpour
+//j'ai rien compris à la remarque
+	
+
+
+
+
