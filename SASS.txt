@@ -1,0 +1,144 @@
+#Mixins
+
+@mixin firefox-message($selector) {
+    body.firefox #{$selector}:before {
+      content: "Hi, Firefox users!";
+    }
+  }
+  
+  @include firefox-message(".header");
+
+
+#List
+
+  @each $animal in puma, sea-slug, egret, salamander {
+    .#{$animal}-icon {
+      background-image: url('/images/#{$animal}.png');
+    }
+  }
+
+join
+append
+each
+nth
+
+#Map
+$map: (key1: value1, key2: value2, key3: value3);
+
+mapget
+map-merge
+each
+
+
+#Color
+https://github.com/sass/sass/blob/stable/lib/sass/script/value/color.rb#L28-L180
+
+
+#functions 
+get-function($function-name)
+call($function, $args...)
+
+p {
+    font: 10px/8px;             // Plain CSS, no division
+    $width: 1000px;
+    width: $width/2;            // Uses a variable, does division
+    width: round(1.5)/2;        // Uses a function, does division
+    height: (500px/2);          // Uses parentheses, does division
+    margin-left: 5px + 8px/2px; // Uses +, does division
+    font: (italic bold 10px/8px); // In a list, parentheses don't count
+  }
+
+  p {
+    color: #010203 * 2;
+  }
+
+  #String 
+
+  The + operation can be used to concatenate strings:
+
+p {
+  cursor: e + -resize;
+}
+is compiled to:
+
+p {
+  cursor: e-resize; }
+but
+
+  p {
+    margin: 3px + 4px auto;
+  }
+  is compiled to:
+  
+p {
+margin: 7px auto; }
+
+p:before {
+    content: "I ate #{5 + 10} pies!";
+    }
+
+#interpolation 
+p.#{$name} {
+    #{$attr}-color: blue;
+  }
+  p.foo {
+    border-color: blue; }
+
+
+
+    #for 
+
+    @each $animal in puma, sea-slug, egret, salamander {
+        .#{$animal}-icon {
+          background-image: url('/images/#{$animal}.png');
+        }
+      }
+
+
+      @each $animal, $color, $cursor in (puma, black, default),
+                                  (sea-slug, blue, pointer),
+                                  (egret, white, move) {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    border: 2px solid $color;
+    cursor: $cursor;
+  }
+}
+
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em) {
+    #{$header} {
+      font-size: $size;
+    }
+  }
+
+
+ # mixins++
+
+  @mixin sexy-border($color, $width: 1in) {
+    border: {
+      color: $color;
+      width: $width;
+      style: dashed;
+    }
+  }
+  p { @include sexy-border(blue); }
+  h1 { @include sexy-border(blue, 2in); }
+
+
+#Magic
+
+@each $animal, $color, $cursor in (puma, black, default),
+                                  (sea-slug, blue, pointer),
+                                  (egret, white, move) {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+    border: 2px solid $color;
+    cursor: $cursor;
+  }
+}
+
+@each $header, $size in (h1: 2em, h2: 1.5em, h3: 1.2em)
+
+
+@mixin box-shadow($shadows...) 
+@include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);

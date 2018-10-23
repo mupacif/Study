@@ -15,16 +15,17 @@ cptNbPairs<-0
 cptNbMult3<-0
 
 répéter
+	écrire a,"hohoh",b,"hihi"
 	lire nb
 	tab[i]<-nb
 jusqu'à ce que i>15 ou nb=-1
 //moyenne nb pairs
 pour j de 1 à i faire
-	si tab[j]MOD2=0 alors
+	si tab[j] MOD 2=0 alors
 		sommeNbPairs<-sommeNbPairs+tab[j];
 		cptNbPairs<-cptNbPairs+1
 	fsi
-	si tab[j]MOD3=0 alors
+	si tab[j] MOD 3=0 alors
 		sommeNbMult3<-sommeNbMult3+tabl[j]
 		cptNbMult3<-cptNbMult3+1
 	fsi
