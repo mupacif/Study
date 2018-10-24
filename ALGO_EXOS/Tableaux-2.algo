@@ -1,0 +1,88 @@
+//1)
+
+tableau tabInitial[12],tabInverse[12]:entier
+var nbLu,cptNbLu,j:entier
+
+cptNbLu<-0
+//lecture
+répéter
+	écrire "entrez des nombres:"
+	lire nbLu
+	si nbLu<>-1 alors
+		tabInitial[cptNbLu]<-nbLu
+		cptNbLu<-cptNbLu+1
+	fsi
+jusqu'à-ce-que cptNbLu>12 ou nbLu =-1
+
+j<-0
+pour j de 0 à cptNbLu-1 faire
+	tabInverse[j]<-tabInitial[cptNbLu-1-j]
+fpour
+
+//affichage du tableau inversé
+pour j de 0 à cptNbLu-1 faire
+	écrire tabInverse[j]
+fpour
+
+
+//2
+
+tableau tabInitial[12],tabFinal:caractère
+var carLu,carPrec:caractère
+var cptCarLu,cptUnique:entier
+
+cptCarLu<-0
+//lecture 
+répéter
+    lire carLu
+    tabInitial[i]<-carLu
+    cptCarLu<-cptCarLu+1      
+jusqu'à-ce-que cptCarLu>12 ou carLu='y'
+
+cptUnique<-1
+carPrec<-tabInitial[0]
+tabFinal[0]<-tabInitial[0]
+
+pour j de 1 à cptCarLu-1 faire
+    si tabInitial[j] <> carPrec alors
+        tabFinal[cptUnique]<-tabInitial[j]
+        cptUnique<-cptUnique+1
+    fsi
+    carPrec<-tabInitial[j]
+fpour
+
+//affichage sans doublons
+pour j de 0 à cptCarLu-1 faire
+        écrire tabFinal[j]        
+fpour
+
+
+//3
+tableau tabl[12],tabFinal[12]:entier
+var nb, i,cptNonNb :entier
+//lecture des nombres
+pour i de 0 à 11 faire
+    lire nb
+    tabl[i]<-nb
+fpour
+
+écrire "nombre à tasser"
+lire nb
+cptNonNb<-0
+//on tasse
+pour i de 0 à 11 faire
+    si tabl[i]<>nb alors
+        tabFinal[cptNonNb]<-tabl[i]
+        cptNonNb<-cptNonNb+1
+    fsi
+fpour 
+//on met le nombre à la fin
+pour i de cptNonNb à 11 faire
+    tabFinal[j]<-nb
+fpour
+
+pour i de 0 à 11 faire
+    écrire tabFinal[i] 
+    
+fpour
+
