@@ -7,7 +7,7 @@
 
 
 # #5 renvoie_int.py
-# def return_doubkle(nb):
+# def return_double(nb):
 #     return nb*2
 
 # #6 renvoie_bool.py
