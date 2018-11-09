@@ -1,0 +1,23 @@
+import socket
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+s.connect(("addr",80))
+
+send() tcp
+sendto() udp
+recv() tcp
+recvfrom() udp
+
+s.send('GET /index.html/1.0\r\n\r\n')
+
+####
+data=s.recv(2048)
+ou
+while 1:
+    data=s.recv(128)
+    print data
+    if data== "":
+        break
+s.close()
+####
+print data
+s.close()

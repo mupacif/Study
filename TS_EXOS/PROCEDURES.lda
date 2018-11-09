@@ -1,0 +1,131 @@
+// ex1
+Pgm principale
+    var nb1,nb2,nb3:entier
+    lire nb1,nb2,nb3,somme:entier
+    procedure som(nb1,nb2,nb3,somme)
+    écrire somme   
+fpgm
+
+
+
+procedure som(var nb1,nb2,nb3: entier in,var somme: entier out)
+    var somme : entier
+    somme<-nb1+nb2+nb3
+fproc
+
+
+// ex 2
+Pgm princ 
+    tableau tabNb[15]:entier
+    var nb,cpt:entier
+    lire nb
+    cpt<-0
+    tant-que nb<>100 et cpt<15 faire
+        tabNb<-nb
+        cpt<-cpt+1
+    ftant
+    pour nb de 0 à cpt faire
+        écrire tabNb[nb]
+    fpour
+
+    moyenne(tabNb,taille)
+    moyenneMult3(tabNb,taille)
+    nbOccurenceDe(tabNb,taille)
+    isCroissante(tabNb)    
+fpgm
+proc moyenne(tableau t[15]:entier in,var taille:entier)
+    var moy,nb:entier
+    nb<-0
+    moy<-0
+    pour nb de 0 à taille faire
+        moy<-moy+t[nb]
+    fpour
+    si taille>0 alors
+        écrire moy/taille
+    sinon
+        écrire 0
+    fsi
+fproc
+
+proc moyenneMult3(tableau t[15]:entier in,var taille:entier)
+    var moy,nb,cpt3:entier
+    nb<-0
+    moy<-0
+    cpt3<-0
+    pour nb de 0 à taille faire
+        si t[nb]%3=0 alors
+            moy<-moy+t[nb]
+            cpt3<-cpt3+1
+        fsi
+        
+    fpour
+    si cpt3>0 alors
+        écrire moy/cpt3
+    sinon
+        écrire 0
+    fsi
+fproc
+
+proc nbOccurenceDe(tableau t[15]:entier in,var taille:entier)
+    var moy,i,cpt:entier
+    nb<-0
+    cpt<-0
+    lire nb
+    pour i de 0 à taille faire
+        si t[nb]=nb alors
+            cpt<-cpt+1
+        fsi
+    fpour
+    écrire nb, "apparait :",cpt," fois"
+fproc
+
+
+proc isCroissante(tableau t[15]:entier in,var taille:entier)
+    var nb,last,cpt,i:entier
+    cpt<-0
+    last<-t[0]
+    si taille>2 alors
+        last<-t[0]
+        i<-1
+        tant-que t[i]<>last et i<=taille faire
+            last<-t[i]
+            i<-i+1
+        ftant
+        si i=taille alors
+            écrire "croissant"
+        fsi
+    sinon
+        écrire "seulement un élement dans le tableau"
+    fsi
+fproc
+
+Pgm princ
+    tableau tabNb[15]:entier
+    var nb,i:entier
+    i<-0
+    tant-que nb<>-1 et i<15 faire
+        lire nb
+        tabNb[i]<-nb
+    ftant
+    lire nb
+fpgm
+proc moyenne(tableau  t[15]:entier in,var taille,nb:entier in)
+    var cpt,i,cpt,moy:entier
+    var pos1,pos2:booléen
+    moy<-0
+    pos1<-faux
+    pos2<-faux
+    cpt<-0
+    tant-que pos1<>vrai et pos2<>vrai faire
+        si pos1 = faux et t[i]=nb alors
+            pos1<-vrai
+        fsi
+        si pos1 et t[i]=nb alors
+            pos2<-vrai
+        fsi
+        si pos1 et pos2 = faux alors
+            cpt<-cpt+1
+            moy<-moy=t[i]
+        fsi
+    ftant
+fproc
