@@ -1,0 +1,9 @@
+---
+- name: tutoansible
+  hosts: web
+  remote_user: root
+  tasks:
+    - name: 1 copier server
+      copy: src=server.py dest=/var/www/My/server.py mode=0664
+    - name: 2 executer
+       command: python /var/www/My/server.py

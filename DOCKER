@@ -1,3 +1,8 @@
+
+#windows shared folder 
+http://support.divio.com/local-development/docker/how-to-use-a-directory-outside-cusers-with-docker-toolboxdocker-for-windows
+docke-machine ssh default
+
 #Start
 
 docker start container
@@ -116,3 +121,11 @@ execute only when inherited
 
 //nginx
 
+
+docker commit
+docker ps -a
+ docker commit 5a8f89adeead newimagename
+
+volume
+
+docker run -ti -v "$PWD/dir1":/dir1 -v "$PWD/dir2":/dir2 newimagename /bin/bash

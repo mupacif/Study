@@ -1,0 +1,26 @@
+packet=Ether()/IP(dst='192.168.1.1')/ICMP()
+packet.show()
+https://scapy.readthedocs.io/en/latest/
+
+scanner IP
+ - range
+ - send ICMP
+ - check response
+
+ scanner port
+ - range
+ - send ICMP
+ - check response
+
+ ARP:table correspondance ip-mac
+
+import scapy.all import *
+target=raw_input("")
+rep,nrep=sr(IP(dst=target)/ICMP())
+for elem in rep:
+    if elm[1].type == 0:
+        print elm[1].dst+"dist"+elm[1].src
+
+ip.addr = http.request.method == POST
+
+arpspoof -i eho -t ipvictime -r 
