@@ -27,3 +27,11 @@ Les pointeurs
 
  (*leff)++ ; //on change la valeur à l'adresse
  *t++ = nb;  // on change la valeur puis on incremente l'adresse du pointeur
+ 
+ parcour pointeur
+ 
+   for(  i = 0; i < leff ; i++)
+           {  printf("Valeur No %d du Tableau : %d\n", i + 1, *t++);
+             printf("Adresse de L'ELEMENT SUIVANT du tableau : %x\n",t);
+             printf("Adresse du PARAM IDENTIFICATEUR' tableau : %x\n",&t); 
+             }
