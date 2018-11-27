@@ -22,3 +22,8 @@ lenght of s1 strlen(s1);
 compare strcmp(s1, s2);
 pointer to the first occurence strchr(s1, ch);
 pointer to the first occurence strstr(s1, s2);
+
+Les pointeurs
+
+ (*leff)++ ; //on change la valeur à l'adresse
+ *t++ = nb;  // on change la valeur puis on incremente l'adresse du pointeur
