@@ -221,3 +221,9 @@ Le texte généré par le préprocesseur sera :
 #endif
 Ici, ce sont les 
  ```
+
+# infos
+
+scanf : utilise le tempon standard
+
+sscanf;
