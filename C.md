@@ -227,3 +227,6 @@ Ici, ce sont les
 scanf : utilise le tempon standard
 
 sscanf;
+
+
+![capture](https://user-images.githubusercontent.com/6844928/49175535-14af6000-f349-11e8-961d-c5c05ffddf2c.PNG)
