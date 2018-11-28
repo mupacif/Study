@@ -1,5 +1,6 @@
 # Tableaux 
 
+```
 double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
 
 double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0};
@@ -10,12 +11,13 @@ pointeurs
 type *var-nom;
 var-nom = &addr;
 int  *ptr = NULL;
+```
 
 # Strings 
-
+```
 char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 char greeting[] = "Hello";
-
+```
 copy s2 in s1 strcpy(s1, s2);
 concatconcat s2 in s1 strcat(s1, s2);
 lenght of s1 strlen(s1);
@@ -24,9 +26,10 @@ pointer to the first occurence strchr(s1, ch);
 pointer to the first occurence strstr(s1, s2);
 
 # Les pointeurs
-
+```
  (*leff)++ ; //on change la valeur à l'adresse
  *t++ = nb;  // on change la valeur puis on incremente l'adresse du pointeur
+ ```
  
 # parcour pointeur
  ```
