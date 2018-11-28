@@ -35,3 +35,12 @@ Les pointeurs
              printf("Adresse de L'ELEMENT SUIVANT du tableau : %x\n",t);
              printf("Adresse du PARAM IDENTIFICATEUR' tableau : %x\n",&t); 
              }
+             
+             
+   -- parcour tabvleau de caractère
+    while(*ptr!='\0')
+     printf('%d',*ptr++)
+     
+    -- init string
+      char S1 [N], S2 [] = "coucou", S3 [3] = "truc", S4 [40],* S5;
+  S5 = "bonjour";
