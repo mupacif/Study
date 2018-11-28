@@ -156,17 +156,17 @@ main()
 
  ```
  
- r : lecture seulement ; le fichier doit exister.
-w : écriture seulement. Si le fichier n’existe pas, il est créé. S’il existe, son (ancien) contenu est
+- r : lecture seulement ; le fichier doit exister.
+- w : écriture seulement. Si le fichier n’existe pas, il est créé. S’il existe, son (ancien) contenu est
 perdu.
-a : écriture en fin de fichier (append). Si le fichier existe déjà, il sera étendu. S’il n’existe pas,
+- a : écriture en fin de fichier (append). Si le fichier existe déjà, il sera étendu. S’il n’existe pas,
 il sera créé – on se ramène alors au mode w.
-r+ : mise à jour (lecture et écriture). Le fichier doit exister. Notez qu’alors il n’est pas possible
+- r+ : mise à jour (lecture et écriture). Le fichier doit exister. Notez qu’alors il n’est pas possible
 de réaliser une lecture à la suite d’une écriture ou une écriture à la suite d’une lecture, sans
 positionner le pointeur de fichier par fseek. Il est toutefois possible d’enchaîner plusieurs
 lectures ou écritures consécutives (de façon séquentielle).
-w+ : création pour mise à jour. Si le fichier existe, son (ancien) contenu sera détruit. S’il
+- w+ : création pour mise à jour. Si le fichier existe, son (ancien) contenu sera détruit. S’il
 n’existe pas, il sera créé. Notez que l’on obtiendrait un mode comparable à w+ en ouvrant un
 fichier vide (mais existant) en mode r+.
-a+ : extension et mise à jour. Si le fichier n’existe pas, il sera créé. S’il existe, le pointeur sera
+- a+ : extension et mise à jour. Si le fichier n’existe pas, il sera créé. S’il existe, le pointeur sera
 positionné en fin de fichier
