@@ -86,7 +86,7 @@ strlen(str);
  ```
   char * adr ; bonjour
  adr = "bonjour" ;
- while (*adr)
+ while (*adr) //parce que \0 => 0 (donc faux en c)
  { printf ("%c", *adr) ;
  adr++ ;
  } 
@@ -118,4 +118,40 @@ void raz (void * adr, int n)
  int (* adf) (double, int) ;
  ```
  
+# fichiers 
+ ```
+#include <stdio.h>
+main()
+{
+ char nomfich[21] ;
+ int n ;
+ FILE * sortie ;
+ printf ("nom du fichier à créer : ") ;
+ scanf ("%20s", nomfich) ;
+ sortie = fopen (nomfich, "w") ;
 
+ do { printf ("donnez un entier : ") ;
+ scanf ("%d", &n) ;
+ if (n) fwrite (&n, sizeof(int), 1, sortie) ;
+ }
+ while (n) ;
+
+ fclose (sortie) ;
+}
+
+
+#include <stdio.h>
+main()
+{
+ char nomfich[21] ;
+ int n ;
+ FILE * entree ;
+ printf ("nom du fichier à lister : ") ;
+ scanf ("%20s", nomfich) ;
+ entree = fopen (nomfich, "r") ;
+ while ( fread (&n, sizeof(int), 1, entree), ! feof(entree) )
+ printf ("\n%d", n) ;
+ fclose (entree) ;
+}
+
+ ```
