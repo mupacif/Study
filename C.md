@@ -69,3 +69,15 @@ har S1 [N], S2 [] = "coucou", S3 [3] = "truc", S4 [40],* S5;
 gets(carPtr); 
 puts(carPtr);
 ```
+
+
+# Les pointeurs génériques
+type quelconque 
+```
+void raz (void * adr, int n)
+ {
+ int i ;
+  char * ad = adr ;
+ for (i=0 ; i<n ; i++, ad++) *ad = 0 ; 
+ }
+ ```
