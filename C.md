@@ -12,7 +12,12 @@ type *var-nom;
 var-nom = &addr;
 int  *ptr = NULL;
 ```
-
+## entête des fonctions recevant des tableaux
+```
+void fct (int t[10]);
+void fct (int * t);
+void fct (int t[]);
+```
 # Strings 
 ```
 char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
