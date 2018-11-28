@@ -194,3 +194,30 @@ void * realloc (void * pointeur, size_t taille ) (stdlib.h)
 permet de modifier la taille d’une zone préalablement allouée (par malloc, calloc ou
 realloc).
 octets
+
+
+# preprocesseurs 
+ ```
+#define DOUBLE(x) ((x)+(x))
+ ...
+DOUBLE(a)/b
+DOUBLE(x+2*y)
+DOUBLE(x++)
+Le texte généré par le préprocesseur sera :
+((a)+(a))/b
+((x+2*y)+(x+2*y))
+
+ ```
+ 
+ ## compilation alteranative 
+  ```
+ #define CODE 1
+ .....
+#if CODE == 1
+ instructions 1
+#endif
+#if CODE == 2
+ instructions 2
+#endif
+Ici, ce sont les 
+ ```
