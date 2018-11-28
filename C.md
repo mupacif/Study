@@ -1,4 +1,4 @@
-Tableaux 
+#Tableaux 
 
 double balance[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
 
@@ -11,7 +11,7 @@ type *var-nom;
 var-nom = &addr;
 int  *ptr = NULL;
 
-Strings 
+#Strings 
 
 char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
 char greeting[] = "Hello";
@@ -23,12 +23,12 @@ compare strcmp(s1, s2);
 pointer to the first occurence strchr(s1, ch);
 pointer to the first occurence strstr(s1, s2);
 
-Les pointeurs
+#Les pointeurs
 
  (*leff)++ ; //on change la valeur à l'adresse
  *t++ = nb;  // on change la valeur puis on incremente l'adresse du pointeur
  
- parcour pointeur
+#parcour pointeur
  
    for(  i = 0; i < leff ; i++)
            {  printf("Valeur No %d du Tableau : %d\n", i + 1, *t++);
@@ -37,7 +37,7 @@ Les pointeurs
              }
              
              
-   -- parcour tabvleau de caractère
+#parcour tabvleau de caractère
     while(*ptr!='\0')
      printf('%d',*ptr++)
      
@@ -48,7 +48,7 @@ Les pointeurs
   
   
   
-  parcour tableau
+ #parcour tableau
   
     int t[]={1,2,3,75,68,95},*ptr;
   ptr=t;
