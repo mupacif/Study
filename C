@@ -44,3 +44,14 @@ Les pointeurs
     -- init string
       char S1 [N], S2 [] = "coucou", S3 [3] = "truc", S4 [40],* S5;
   S5 = "bonjour";
+  
+  
+  
+  
+  parcour tableau
+  
+    int t[]={1,2,3,75,68,95},*ptr;
+  ptr=t;
+    
+  for(ptr=t;ptr<t+6;ptr++)
+    printf("%d-",*ptr);
