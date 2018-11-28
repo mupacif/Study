@@ -82,8 +82,21 @@ gets(carPtr);
 puts(carPtr);
 strlen(str);
 ```
-
-
+## parcour de chaine 
+ ```
+  char * adr ; bonjour
+ adr = "bonjour" ;
+ while (*adr)
+ { printf ("%c", *adr) ;
+ adr++ ;
+ } 
+ ```
+ ## tableau de string 
+ 
+  ```
+char * jour[7] = { "lundi", "mardi", "mercredi", "jeudi",
+ "vendredi", "samedi", "dimanche" } ;
+ ```
 # Les pointeurs génériques
 type quelconque 
 ```
@@ -96,9 +109,13 @@ void raz (void * adr, int n)
  ```
  
  # pointeur  de fonctions 
+ ```
  int fct1 (double, int) ;
  adf = fct1 ;
  fct1 (5.35, 4) ;
  
  float integ ( float(*f)(float))
  int (* adf) (double, int) ;
+ ```
+ 
+
