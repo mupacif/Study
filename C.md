@@ -170,3 +170,27 @@ n’existe pas, il sera créé. Notez que l’on obtiendrait un mode comparable 
 fichier vide (mais existant) en mode r+.
 - a+ : extension et mise à jour. Si le fichier n’existe pas, il sera créé. S’il existe, le pointeur sera
 positionné en fin de fichier
+
+
+# malloc realloc calloc 
+ ```
+long * adr ;
+ .....
+ adr = malloc (100 * sizeof(long)) ;
+ 
+ free (adr) ;
+  ```
+ ## La fonction : calloc
+ ``` 
+void * calloc ( size_t nb_blocs, size_t taille ) (stdlib.h)
+ ```
+alloue l’emplacement nécessaire à nb_blocs consécutifs, ayant chacun une taille de taille
+
+
+## La fonction : realloc
+ ```
+void * realloc (void * pointeur, size_t taille ) (stdlib.h)
+ ```
+permet de modifier la taille d’une zone préalablement allouée (par malloc, calloc ou
+realloc).
+octets
