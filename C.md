@@ -80,6 +80,7 @@ for (i=0 ; i<10 ; i++) t[i] = 1 ;
 ```
 gets(carPtr); 
 puts(carPtr);
+strlen(str);
 ```
 
 
@@ -93,3 +94,11 @@ void raz (void * adr, int n)
  for (i=0 ; i<n ; i++, ad++) *ad = 0 ; 
  }
  ```
+ 
+ # pointeur  de fonctions 
+ int fct1 (double, int) ;
+ adf = fct1 ;
+ fct1 (5.35, 4) ;
+ 
+ float integ ( float(*f)(float))
+ int (* adf) (double, int) ;
