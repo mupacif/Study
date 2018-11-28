@@ -68,6 +68,13 @@ har S1 [N], S2 [] = "coucou", S3 [3] = "truc", S4 [40],* S5;
 
 ```
 
+```
+for (i=0 ; i<10 ; i++) t[i] = 1 ;
+ for (i=0 ; i<10 ; i++, t++) *t = 1 ;
+
+ for (i=0 ; i<10 ; i++) *(t+i) = 1 ;
+ for (i=0 ; i<10 ; i++) t[i] = 1 
+```
 # fonction sur les chaiens de caractères 
 
 ```
